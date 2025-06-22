@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mudae - Bot Profile | Top.gg Clone</title>
+    <title>Trang Web của Tôi - Giống Top.gg (Nhiều tính năng)</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -24,8 +24,8 @@
                 </ul>
             </nav>
             <div class="search-bar">
-                <input type="text" placeholder="Tìm kiếm bot hoặc server...">
-                <button><i class="fas fa-search"></i></button>
+                <input type="text" id="navbar-search-input" placeholder="Tìm kiếm bot hoặc server...">
+                <button id="navbar-search-button"><i class="fas fa-search"></i></button>
             </div>
             <div class="user-actions">
                 <button class="btn btn-login">Đăng nhập</button>
@@ -34,153 +34,36 @@
         </div>
     </header>
 
-    <main class="main-content container">
-        <div class="bot-profile-header">
-            <div class="bot-avatar-container">
-                <img src="https://cdn.top.gg/icons/686414777592477810/8939c01740924ecae1770e1762c4314c.webp?size=512" alt="Mudae Avatar" class="bot-avatar">
-            </div>
-            <div class="bot-details">
-                <div class="bot-name-section">
-                    <h1>Mudae <i class="fas fa-check-circle verified-badge"></i></h1>
-                </div>
-                <p class="bot-tagline">The most popular waifu and husbando collector with many mini-games. Over 1,000,000 Discord Servers!</p>
-                <div class="bot-actions">
-                    <button class="btn btn-invite">Mời</button>
-                    <button class="btn btn-action">Website</button>
-                    <button class="btn btn-action">Ủng hộ</button>
-                    <button class="btn btn-action">Vote</button>
-                </div>
-                <div class="bot-stats">
-                    <div class="stat-item">
-                        <i class="fas fa-server"></i>
-                        <span>1.000.000+ Servers</span>
-                    </div>
-                    <div class="stat-item">
-                        <i class="fas fa-users"></i>
-                        <span>5.000.000+ Users</span>
-                    </div>
-                    <div class="stat-item">
-                        <i class="fas fa-arrow-up"></i>
-                        <span>1.234.567 Votes</span>
-                    </div>
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="container">
+                <h1>Khám phá những điều tuyệt vời nhất cho Discord của bạn</h1>
+                <p>Tìm kiếm bot Discord tốt nhất, máy chủ và hơn thế nữa!</p>
+                <div class="hero-search">
+                    <input type="text" id="hero-search-input" placeholder="Tìm kiếm bot hoặc server...">
+                    <button id="hero-search-button"><i class="fas fa-search"></i></button>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="bot-profile-body">
-            <div class="content-area">
-                <nav class="bot-tabs">
-                    <ul>
-                        <li class="active"><a href="#info">Thông tin</a></li>
-                        <li><a href="#commands">Lệnh</a></li>
-                        <li><a href="#reviews">Đánh giá</a></li>
-                        <li><a href="#support">Hỗ trợ</a></li>
-                        <li><a href="#premium">Premium</a></li>
-                    </ul>
-                </nav>
-
-                <section id="info" class="tab-content active">
-                    <h2>Mudae Bot - Giới thiệu chi tiết</h2>
-                    <p>Mudae là một bot Discord chuyên về việc sưu tập waifu và husbando, mang đến trải nghiệm độc đáo cho người dùng. Với hàng ngàn nhân vật từ anime, manga, và game, Mudae cho phép bạn thu thập, đấu giá, và quản lý bộ sưu tập của mình một cách thú vị.</p>
-
-                    <h3>Tính năng nổi bật</h3>
-                    <ul>
-                        <li><i class="fas fa-star"></i> **Sưu tập nhân vật:** Hơn 60.000 nhân vật từ các tác phẩm phổ biến.</li>
-                        <li><i class="fas fa-coins"></i> **Hệ thống kinh tế:** Kiếm tiền, mua bán, và đấu giá các nhân vật.</li>
-                        <li><i class="fas fa-gamepad"></i> **Mini-games:** Chơi các trò chơi nhỏ để nhận phần thưởng.</li>
-                        <li><i class="fas fa-ruler-combined"></i> **Tùy chỉnh:** Cá nhân hóa hồ sơ và bộ sưu tập của bạn.</li>
-                        <li><i class="fas fa-users"></i> **Tương tác cộng đồng:** Giao dịch và cạnh tranh với bạn bè.</li>
-                    </ul>
-
-                    <h3>Cách sử dụng cơ bản</h3>
-                    <p>Để bắt đầu với Mudae, bạn chỉ cần mời bot vào máy chủ Discord của mình. Sau đó, sử dụng lệnh `$wa` hoặc `$husb` để xuất hiện một nhân vật ngẫu nhiên. Nếu bạn muốn sở hữu nhân vật đó, hãy nhanh chóng sử dụng `$claim` trước khi người khác làm vậy!</p>
-                    <p>Bạn có thể tìm thấy danh sách đầy đủ các lệnh và hướng dẫn chi tiết trên trang web chính thức của Mudae hoặc bằng cách sử dụng lệnh `$help` trong Discord.</p>
-
-                    <p>Mudae không chỉ là một bot sưu tập, mà còn là một cộng đồng lớn mạnh với hàng triệu người dùng trên khắp thế giới. Tham gia ngay để bắt đầu hành trình sưu tập của bạn!</p>
-                    <h3>Hình ảnh minh họa</h3>
-                    <img src="https://cdn.top.gg/assets/img/bot-feature-template.png" alt="Mudae Feature 1" style="width: 100%; max-width: 600px; border-radius: 8px; margin-bottom: 20px;">
-                    <p>Mudae liên tục được cập nhật với các tính năng mới và nhân vật mới, đảm bảo trải nghiệm luôn mới mẻ và hấp dẫn.</p>
-                </section>
-
-                <section id="reviews" class="tab-content">
-                    <div class="review-summary">
-                        <h3>Đánh giá và Phản hồi</h3>
-                        <div class="rating-overall">
-                            <span class="rating-score">4.52</span>
-                            <div class="stars">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                            </div>
-                            <span class="total-reviews">(12,345 đánh giá)</span>
-                        </div>
-                        <button class="btn btn-write-review">Viết đánh giá</button>
+        <section class="categories">
+            <div class="container">
+                <h2>Khám phá theo danh mục</h2>
+                <div class="category-grid" id="category-grid">
                     </div>
-
-                    <div class="individual-reviews">
-                        <div class="review-item">
-                            <div class="review-header">
-                                <img src="https://via.placeholder.com/40" alt="User Avatar" class="user-avatar">
-                                <div class="user-info">
-                                    <span class="username">An Nguyen</span>
-                                    <div class="stars small">
-                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                                <span class="review-date">1 ngày trước</span>
-                            </div>
-                            <p class="review-text">Bot này thực sự rất hay! Tôi đã dành hàng giờ để chơi và thu thập nhân vật. Rất đáng thử!</p>
-                        </div>
-                        <div class="review-item">
-                            <div class="review-header">
-                                <img src="https://via.placeholder.com/40" alt="User Avatar" class="user-avatar">
-                                <div class="user-info">
-                                    <span class="username">Van Le</span>
-                                    <div class="stars small">
-                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                                    </div>
-                                </div>
-                                <span class="review-date">3 ngày trước</span>
-                            </div>
-                            <p class="review-text">Rất nhiều nhân vật, nhưng đôi khi hơi khó để có được nhân vật mình muốn. Overall vẫn là một bot tuyệt vời.</p>
-                        </div>
-                        </div>
-                </section>
             </div>
+        </section>
 
-            <aside class="sidebar">
-                <div class="sidebar-section">
-                    <h3>Liên kết</h3>
-                    <ul>
-                        <li><a href="#" target="_blank"><i class="fas fa-globe"></i> Website</a></li>
-                        <li><a href="#" target="_blank"><i class="fas fa-discord"></i> Support Server</a></li>
-                        <li><a href="#" target="_blank"><i class="fas fa-book"></i> Docs</a></li>
-                    </ul>
-                </div>
-                <div class="sidebar-section">
-                    <h3>Thống kê</h3>
-                    <p>Ping: <span class="stat-value">50ms</span></p>
-                    <p>Lệnh mỗi giây: <span class="stat-value">100+</span></p>
-                    <p>Uptime: <span class="stat-value">99.9%</span></p>
-                </div>
-                <div class="sidebar-section">
-                    <h3>Danh mục</h3>
-                    <div class="categories-tags">
-                        <span>Anime</span>
-                        <span>Multi-purpose</span>
-                        <span>Fun</span>
-                        <span>Collectibles</span>
-                        <span>Games</span>
-                        <span>Roleplay</span>
+        <section class="popular-bots">
+            <div class="container">
+                <h2>Các Bot phổ biến <span id="current-category-display"></span></h2>
+                <div class="bot-grid" id="bot-grid">
                     </div>
+                <div class="load-more-container">
+                    <button id="load-more-bots" class="btn btn-add-bot">Tải thêm</button>
                 </div>
-                <div class="sidebar-section">
-                    <h3>Người tạo</h3>
-                    <div class="creator-info">
-                        <img src="https://via.placeholder.com/30" alt="Creator Avatar" class="creator-avatar">
-                        <span class="creator-name">mudaecreator</span>
-                    </div>
-                </div>
-            </aside>
-        </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
@@ -225,6 +108,14 @@
             </div>
         </div>
     </footer>
+
+    <div id="bot-profile-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div id="modal-bot-details">
+                </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
