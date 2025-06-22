@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Example: Alert when clicking the "Add Bot" button
+    // Basic functionality for Navbar buttons (from previous example)
     const addBotButton = document.querySelector('.btn-add-bot');
     if (addBotButton) {
         addBotButton.addEventListener('click', () => {
@@ -7,22 +7,44 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Example: Log search query when pressing search button in hero section
-    const heroSearchButton = document.querySelector('.hero-search button');
-    const heroSearchInput = document.querySelector('.hero-search input');
+    const heroSearchButton = document.querySelector('.navbar .search-bar button');
+    const heroSearchInput = document.querySelector('.navbar .search-bar input');
     if (heroSearchButton && heroSearchInput) {
         heroSearchButton.addEventListener('click', () => {
             const query = heroSearchInput.value;
             if (query) {
                 console.log(`Tìm kiếm: ${query}`);
                 alert(`Tìm kiếm cho: "${query}"`);
-                // In a real application, you would send this query to a backend API
             } else {
                 alert('Vui lòng nhập từ khóa tìm kiếm.');
             }
         });
     }
 
-    // Bạn có thể thêm nhiều yếu tố tương tác khác tại đây,
-    // như tải nội dung động, lọc, sắp xếp, v.v.
+    // Tab switching logic for Info/Commands/Reviews
+    const botTabs = document.querySelectorAll('.bot-tabs li');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    botTabs.forEach(tab => {
+        tab.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default link behavior
+
+            // Remove active class from all tabs and content
+            botTabs.forEach(item => item.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+
+            // Add active class to clicked tab
+            tab.classList.add('active');
+
+            // Show the corresponding tab content
+            const targetId = tab.querySelector('a').getAttribute('href');
+            document.querySelector(targetId).classList.add('active');
+        });
+    });
+
+    // Ensure the 'Info' tab is active by default on load
+    if (botTabs.length > 0 && tabContents.length > 0) {
+        botTabs[0].classList.add('active');
+        tabContents[0].classList.add('active');
+    }
 });
